@@ -1,0 +1,279 @@
+1. IPv4 Address: 10.1.2.117
+   Subnet Mask:  255.255.224.0
+
+2. Guessed IP: 10.1.0.2
+	
+   ping 10.1.0.2
+
+   Pinging 10.1.0.2 with 32 bytes of data:
+   Reply from 10.1.0.2: bytes=32 time=4ms TTL=255
+   Reply from 10.1.0.2: bytes=32 time=8ms TTL=255
+   Reply from 10.1.0.2: bytes=32 time=3ms TTL=255
+   Reply from 10.1.0.2: bytes=32 time=2ms TTL=255
+
+   Ping statistics for 10.1.0.2:
+      Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+   Approximate round trip times in milli-seconds:
+      Minimum = 2ms, Maximum = 8ms, Average = 4ms
+
+   
+   Another IP: 10.1.31.250
+   
+   ping 10.1.31.250
+
+   Pinging 10.1.31.250 with 32 bytes of data:
+   Reply from 10.1.2.117: Destination host unreachable.
+   Reply from 10.1.2.117: Destination host unreachable.
+   Reply from 10.1.2.117: Destination host unreachable.
+   Reply from 10.1.2.117: Destination host unreachable.
+
+   Ping statistics for 10.1.31.250:
+      Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+
+3.  Default Gateway: 10.1.0.1
+    
+	The default gateway's IP being at the beginning or end of the range is a convention,                                                                                         	making it easy for devices and network administrators to locate it quickly.
+   
+4. External IP: 14.139.197.66
+	
+	It is different from my system's IP address
+
+5. ASN Name: NKN Core Network
+   ASN Number: AS55824
+
+6. ISP: Iiit Assam
+
+7. 14.139.192.0/24: VARIABLE ENERGY CYCLOTRON CENTRE
+
+8. Traceroute
+
+tracert iiitg.ac.in
+
+Tracing route to iiitg.ac.in [14.139.197.68]
+over a maximum of 30 hops:
+
+  1     2 ms     3 ms     3 ms  10.1.0.2
+  2    21 ms     8 ms    10 ms  192.168.253.252
+  3     *        *        *     Request timed out.
+  4     *        *        *     Request timed out.
+  5     *        *        *     Request timed out.
+  6     *        *        *     Request timed out.
+  7     *        *        *     Request timed out.
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10     *        *        *     Request timed out.
+ 11     *        *        *     Request timed out.
+ 12     *        *        *     Request timed out.
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *        *        *     Request timed out.
+ 28     *        *        *     Request timed out.
+ 29     *        *        *     Request timed out.
+ 30     *        *        *     Request timed out.
+
+Trace complete.
+
+Hop 1 and 2 (10.1.0.2 and 192.168.253.252):
+
+These are your local network devices (routers or gateway). The low times (2-21 ms) indicate they're close to you (within your local network).
+Hops 3-30 (Request timed out):
+
+From hop 3 onward, there is a timeout for each request. This means the routers in the path are not responding to your tracert requests (ICMP packets).
+Why it happens: Many routers or firewalls block ICMP requests for security reasons, or they might be configured not to respond to tracert probes.
+What it means: The path to the destination (iiitg.ac.in) is still operational; the packets are likely still reaching the destination, but the intermediate routers aren't responding to tracert.
+
+9. ping iitg.ac.in
+
+   Pinging iitg.ac.in [14.139.196.75] with 32 bytes of data:
+   Request timed out.
+   Request timed out.
+   Request timed out.
+   Request timed out.
+
+   Ping statistics for 14.139.196.75:
+      Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+
+   IIT Guwahati doesn't belong to the same ISP as IIIT Guwahati
+   ASN Name: NKN EDGE Network
+   ASN Number: AS55847
+   ISP: National Knowledege Network
+
+10. 
+
+initial: 
+
+arp -a
+
+Interface: 10.1.2.117 --- 0xc
+  Internet Address      Physical Address      Type
+  10.1.0.1              00-00-0c-9f-f0-6f     dynamic
+  10.1.0.240            5e-79-d0-14-bb-97     dynamic
+  10.1.2.84             ee-bf-c7-58-37-35     dynamic
+  224.0.0.22            01-00-5e-00-00-16     static
+
+
+after sending ping to ping 10.1.0.100
+
+ping 10.1.0.100
+
+Pinging 10.1.0.100 with 32 bytes of data:
+Reply from 10.1.0.100: bytes=32 time=8ms TTL=64
+Reply from 10.1.0.100: bytes=32 time=7ms TTL=64
+Reply from 10.1.0.100: bytes=32 time=3ms TTL=64
+Reply from 10.1.0.100: bytes=32 time=4ms TTL=64
+
+Ping statistics for 10.1.0.100:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 3ms, Maximum = 8ms, Average = 5ms
+
+final:
+
+arp -a
+
+Interface: 10.1.2.117 --- 0xc
+  Internet Address      Physical Address      Type
+  10.1.0.1              00-00-0c-9f-f0-6f     dynamic
+  10.1.0.100            f2-85-e1-df-00-6f     dynamic
+  10.1.0.240            5e-79-d0-14-bb-97     dynamic
+  10.1.2.84             ee-bf-c7-58-37-35     dynamic
+  10.1.4.183            f6-a5-3e-4d-0d-d1     dynamic
+  10.1.9.226            90-0f-0c-65-94-9d     dynamic
+  10.1.31.255           ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+
+
+Yes, there is a difference.
+
+Before pinging 10.1.0.100, it was not in your ARP cache. After pinging, the entry for 10.1.0.100 appeared in the cache with its MAC address.
+
+Why?
+Your computer learned the MAC address of 10.1.0.100 through an ARP request-response during the ping, and added it to the cache for future communication.
+
+11. 
+
+netstat -r
+===========================================================================
+Interface List
+  4...00 ff 08 a5 02 0f ......TAP-Windows Adapter V9
+  8...36 6f 24 e2 eb 2b ......Microsoft Wi-Fi Direct Virtual Adapter
+ 10...36 6f 24 e2 eb 3b ......Microsoft Wi-Fi Direct Virtual Adapter #2
+ 12...34 6f 24 e2 eb 7b ......MediaTek MT7921 Wi-Fi 6 802.11ax PCIe Adapter
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0         10.1.0.1       10.1.2.117     50
+         10.1.0.0    255.255.224.0         On-link        10.1.2.117    306
+       10.1.2.117  255.255.255.255         On-link        10.1.2.117    306
+      10.1.31.255  255.255.255.255         On-link        10.1.2.117    306
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    331
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    331
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link        10.1.2.117    306
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+  255.255.255.255  255.255.255.255         On-link        10.1.2.117    306
+===========================================================================
+Persistent Routes:
+  None
+
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+  1    331 ::1/128                  On-link
+ 12    306 fe80::/64                On-link
+ 12    306 fe80::1415:9a4f:99d0:1589/128
+                                    On-link
+  1    331 ff00::/8                 On-link
+ 12    306 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None
+
+MAC address of the interface using which you are connected to: 34:6f:24:e2:eb:7b
+This is the MAC address associated with the MediaTek MT7921 Wi-Fi 6 802.11ax PCIe Adapter
+
+12. 
+
+From Hostel -> no responses from all domains:
+
+ping www.berkeley.edu
+
+Pinging www.berkeley.edu [141.193.213.21] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 141.193.213.21:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+ping www.mit.edu
+
+Pinging e9566.dscb.akamaiedge.net [23.58.1.151] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 23.58.1.151:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+ping www.ucl.ac.uk
+
+Pinging www.ucl.ac.uk.cdn.cloudflare.net [104.18.32.18] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 104.18.32.18:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+ping www.usyd.edu.au
+
+Pinging rpxy-loadb-1thwdg5gwm0fm-2097141603.ap-southeast-2.elb.amazonaws.com [13.237.199.202] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 13.237.199.202:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+ping www.uct.ac.za
+
+Pinging cms-vip-prd.uct.ac.za [137.158.159.192] with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 137.158.159.192:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+
+
+
+
+
+

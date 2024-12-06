@@ -1,0 +1,14 @@
+1. Default Gateway . . . . . . . . . : 10.1.0.1
+
+2. 10.1.0.1              00-00-0c-9f-f0-6f     dynamic
+
+3. Sender IP address: 10.1.9.32
+   Target IP address: 169.254.169.254
+
+4. No, I don't see any ARP responses
+
+
+
+
+
+

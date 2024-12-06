@@ -1,0 +1,50 @@
+1) Connections -------
+   wirenode1 (x) to L2 -switch -- ETHERNET Protocol,
+   L2 switch to Router-3 -- ETHERNET Protocol,
+   Router-3 to Router-4 -- Point-to-Point Protocol (WAN),
+   Router-4 to Access Point_5 -- ETHERNET Protocol,
+   Access Point_5 to  wireless_Node(Y) -- IEEE802.11 protocol
+  
+2) Address --------
+  Node_x :- IP address 11.1.1.2
+            Physical address AF1D00000101
+
+  L2 Switch :- Physical address AF1D00000201 {wired node_1}
+	       Physical address AF1D00000202 {Router_3}
+
+  Router_3 :- Physical address AF1D00000301 
+              IP Address  11.2.1.1 {L2-Switch}
+	      Physical address AF1D00000302
+	      IP Address  11.2.1.1 {Router- 4}
+
+  Router_4 :- Physical address AF1D00000401 
+              IP Address  11.2.1.2 {Router -3}
+	      Physical address AF1D00000402
+	      IP Address  11.3.1.1 {Access Point-5}
+
+  Access Point :- Physical address AF1D00000502 {Wireless}
+		  Physical address AF1D00000501 {Router-4}
+   
+  Node_y :- Physical address AF1D00000601 
+            IP address 11.3.1.2
+
+3) Application on sending data from x to y :-
+  TOTAL = 8111
+  ERROR = 7
+  COLLIDED = 4
+  a. 8100/8111 = 0.9986
+  b. 7/8111 = 0.00086
+  c. 4/8111 = 0.00049
+  d. lost packets = 11
+  e. 0.58
+  f.  TOTAL = 7720   A. 7716/7720 = 0.9994
+      ERROR = 2      B. 2/7720 = 0.00025
+      COLLIDED = 2   C. 2/7720 = 0.00025
+                     D. lost packets = 4
+                     E. 0.56
+
+4) Screenshot Provided
+
+5) Screenshot Provided 
+ 
+6) Payload -- 7362714 , Header size -- 1086162

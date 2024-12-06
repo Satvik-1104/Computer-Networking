@@ -1,0 +1,20 @@
+Q1:
+
+1. IP address used by the client computer (source): 192.168.141.15
+   Port number used by the client computer (source): 50773
+
+2. IP address used by gaia.cs.umass.edu: 128.119.245.12
+   Port number used by gaia.cs.umass.edu: 80
+
+3. Sequence number of the TCP SYN segment that is used to initiate the TCP
+   connection between the client computer and gaia.cs.umass.edu : 2231379419
+
+4. Sequence number of the SYNACK segment sent by gaia.cs.umass.edu to the 
+   client computer in reply to the SYN : 2600885437
+
+   What is it in the segment that identifies the segment as
+   a SYNACK segment : Message has a flag that carries (SYN,ACK) 
+
+5. What is the value of the Acknowledgement field in the SYNACK segment: 2231379420
+   It is determined by adding 1 to the sequence number of the SYN segment sent by
+   the client computer

@@ -1,0 +1,10 @@
+Experiment_1:
+
+Designated Ports:
+B2 - B1
+B1 - B3
+B3 - B5
+
+Blocked Ports (to avoid cycles in the connection):
+B2 - B4
+B4 - B5

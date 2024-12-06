@@ -1,0 +1,5 @@
+SSID = 30 Munroe St
+Beacon Interval: 0.102400 Seconds
+Source address: Cisco-Li_f7:1d:51 (00:16:b6:f7:1d:51)
+Destination address: Broadcast (ff:ff:ff:ff:ff:ff)
+BSS Id: Cisco-Li_f7:1d:51 (00:16:b6:f7:1d:51)
